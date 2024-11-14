@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cadetblue;
+}
+
+label {
+  text-transform: lowercase;
+}
+
+input {width: 300px;}
+
+p {margin-top:1em}

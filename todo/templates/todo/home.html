@@ -1,0 +1,31 @@
+{% extends 'todo/base.html' %}
+
+{% block conteudo %}
+
+  <form action="" method="post">
+
+    {% csrf_token %}
+<!-- 
+    {{formulario.as_p}}
+    <button class="btn btn-primary">adicionar</button>
+
+    <hr> -->
+    <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="nova tarefa.." name="nome">
+        </div>
+        <div class="col">
+           <button class="btn btn-primary">adicionar</button>
+        </div>
+     </div>
+
+
+  </form>
+
+  {% for tarefa in tarefas %}
+
+  <p>{{ forloop.counter }} - {{ tarefa.nome}}</p>
+     
+  {% endfor %}
+
+{% endblock %}
